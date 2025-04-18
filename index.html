@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .app {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .banner {
+      position: relative;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      background: #f0f0f0;
+    }
+
+    .nav button {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    .menu {
+      padding: 20px;
+    }
+
+    .menu h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    .btn-add {
+      background: #000;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      background: #f0f0f0;
+      border-top: 1px solid #ddd;
+    }
+
+    footer div {
+      font-size: 12px;
+      color: #444;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>Restaurant</header>
+
+    <div class="banner">
+      <img src="https://i.imgur.com/JC2IwlJ.jpg" alt="Promo Banner">
+      <div class="banner-text">20% OFF THIS WEEKEND!</div>
+    </div>
+
+    <div class="nav">
+      <button>Menu</button>
+      <button>Order Now</button>
+      <button>Reserve</button>
+      <button>Offers</button>
+    </div>
+
+    <div class="menu">
+      <h2>Menu</h2>
+
+      <div class="item">
+        <img src="https://i.imgur.com/BbRjRMX.jpg" alt="Pizza">
+        <div class="item-info">
+          <h3>Margherita</h3>
+          <div class="price">₱350</div>
+        </div>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="https://i.imgur.com/WPfZ2t0.jpg" alt="Cheeseburger">
+        <div class="item-info">
+          <h3>Cheeseburger</h3>
+          <div class="price">₱280</div>
+        </div>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="https://i.imgur.com/NKaQqxy.jpg" alt="Caesar Salad">
+        <div class="item-info">
+          <h3>Caesar Salad</h3>
+          <div class="price">₱220</div>
+        </div>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="https://i.imgur.com/J2XXHRy.jpg" alt="Carbonara">
+        <div class="item-info">
+          <h3>Carbonara</h3>
+          <div class="price">₱400</div>
+        </div>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+    </div>
+
+    <footer>
+      <div>Home</div>
+      <div>Order</div>
+      <div>Reservations</div>
+      <div>Account</div>
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn-add');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
